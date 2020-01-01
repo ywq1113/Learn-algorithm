@@ -1,6 +1,8 @@
 #include <iostream>
 #include <cstdio>
+#include <string.h>
 #include <vector>
+#include "HasPath.h"
 
 using namespace std;
 
@@ -22,7 +24,7 @@ bool hasPath(char* matrix, int rows, int cols, char* str)
 {
 
     //判断边界条件
-    if(matrix==nullptr || row<1 || cols<1 || str==nullptr)
+    if(matrix==nullptr || rows<1 || cols<1 || str==nullptr)
         return false;
     
     /********************************************
@@ -34,7 +36,7 @@ bool hasPath(char* matrix, int rows, int cols, char* str)
     bool *visited = new bool[rows*cols];
     memset(visited, 0, rows*cols);
     
-    //遍历bool数组，如果某个路径具有所需str的所有元素则返回true
+    //遍历bool数组，hasPathCore函数返回true则直接返回true
     int pathLength=0;
     for(int row=0;row<rows;++row){
         for(int col=0;col<cols;++col){
@@ -81,3 +83,6 @@ bool hasPathCore(const char* matrix, int rows, int cols, int row,
     return hasPath;
 }
 
+int main(){
+    return 0;
+}
