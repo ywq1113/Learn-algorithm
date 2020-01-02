@@ -53,7 +53,7 @@ bool hasPath(char* matrix, int rows, int cols, char* str)
 bool hasPathCore(const char* matrix, int rows, int cols, int row,
                 int col, const char* str, int& pathLength, bool* visited)
 {
-    //当所求的字符串为空时，直接返回true
+    //当所求的字符串为空时，直接返回true || 当找完所有字符时，即pathLength=str.length()
     if(str[pathLength]=='\0')
         return true;
 
