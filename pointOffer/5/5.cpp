@@ -26,10 +26,17 @@ void ReplaceBlank(char string[], int length){
     //建立两个指针分别指向替换前和替换后的字符串末尾
     int indexOfOriginal = originalLength;
     int indexOfNew = newLength;
-    // 找到循环终止条件——当连个指针指向同一个字符时
+    // 找到循环终止条件——当两个指针指向同一个字符时
     while(indexOfOriginal >= 0 && indexOfNew > indexOfOriginal)
     {
       //当p1指向为空格时，将%20复制到p2处，并使得p2向前移动对应的字符数
+      /******************************************************
+       关于a[--i]和a[i--]的区别
+       eg. a[3] = {1,2,3};
+           int i=1
+           printf("%d",a[i--])  输出1 先使用a[i],在执行i-1
+           printf("%d",a[--i])  输出2 先执行i-1,再使用a[i]
+      *******************************************************/
       if (string[indexOfOriginal] == ' ')
       {
         string[indexOfNew--] = '0';
