@@ -53,7 +53,7 @@ bool Increment(char* number)
     {
         //字符减去'0'就转换为数字
         int nSum = number[i]-'0'+nTakeOver;
-        //将number+1
+        //将number+1,这个判断条件没看懂，why
         if(i==nLength-1)
             nSum++;
         if(nSum>=10)
