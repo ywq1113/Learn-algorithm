@@ -5,6 +5,13 @@
 
 using namespace std;
 
+/**********************************************
+ 两数之和
+ 已知数组[2,7,11,15], target=9
+ 返回[0,1]
+ 注：不使用重复的数字
+***********************************************/
+
 vector<int> twoSum(vector<int> &nums, int target)
 {
     unordered_map<int, int> hash;

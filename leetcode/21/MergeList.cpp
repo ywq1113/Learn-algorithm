@@ -59,4 +59,5 @@ public:
 
 };
 
-  
+int main(){
+}  
